@@ -17,50 +17,52 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="font-sans bg-bg text-ink leading-relaxed text-base">
 
   <!-- ======================== NAV ======================== -->
-  <nav class="nav" aria-label="Main navigation">
-    <div class="container">
-      <a href="#hero" class="nav-logo" aria-label="ADH — home">A<span>DH</span></a>
+  <nav class="fixed top-0 left-0 right-0 z-[100] h-16 flex items-center bg-[rgba(248,247,244,0.92)] backdrop-blur-md border-b border-border" aria-label="Main navigation">
+    <div class="container flex items-center justify-between">
+      <a href="#hero" class="font-display text-[1.4rem] font-bold tracking-[0.04em] text-ink" aria-label="ADH — home">A<span class="text-accent">DH</span></a>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services" class="text-[0.875rem] font-medium tracking-[0.05em] uppercase text-ink-light transition-colors duration-[250ms] hover:text-accent focus-visible:text-accent">Services</a></li>
+        <li><a href="#work"     class="text-[0.875rem] font-medium tracking-[0.05em] uppercase text-ink-light transition-colors duration-[250ms] hover:text-accent focus-visible:text-accent">Work</a></li>
+        <li><a href="#about"   class="text-[0.875rem] font-medium tracking-[0.05em] uppercase text-ink-light transition-colors duration-[250ms] hover:text-accent focus-visible:text-accent">About</a></li>
+        <li><a href="#contact" class="text-[0.875rem] font-medium tracking-[0.05em] uppercase text-ink-light transition-colors duration-[250ms] hover:text-accent focus-visible:text-accent">Contact</a></li>
       </ul>
 
-      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <button class="flex flex-col justify-center gap-[5px] w-9 h-9 cursor-pointer bg-transparent border-0 p-1 md:hidden" id="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+        <span class="block h-[2px] bg-ink rounded-sm transition-all duration-[250ms]"></span>
+        <span class="block h-[2px] bg-ink rounded-sm transition-all duration-[250ms]"></span>
+        <span class="block h-[2px] bg-ink rounded-sm transition-all duration-[250ms]"></span>
       </button>
     </div>
   </nav>
 
   <!-- ======================== HERO ======================== -->
-  <section id="hero" aria-labelledby="hero-heading">
+  <section id="hero" class="min-h-screen [min-height:100svh] pt-16 grid place-items-center [background:linear-gradient(160deg,#f8f7f4_60%,#f0ede6_100%)]" aria-labelledby="hero-heading">
     <div class="container">
-      <div class="hero-inner">
+      <div class="flex items-center gap-[clamp(2rem,6vw,5rem)] flex-wrap max-md:flex-col-reverse max-md:text-center">
 
-        <div class="hero-text">
-          <span class="hero-eyebrow">Graphic Designer &amp; Illustrator</span>
-          <h1 id="hero-heading">
+        <div class="flex-[1_1_340px]">
+          <span class="inline-block text-[0.75rem] font-semibold tracking-[0.15em] uppercase text-accent mb-3">Graphic Designer &amp; Illustrator</span>
+          <h1 id="hero-heading" class="font-display text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.1] font-bold text-ink mb-5">
             Crafting stories<br/>
-            through <em>art&nbsp;&amp;&nbsp;design</em>
+            through <em class="not-italic text-accent">art&nbsp;&amp;&nbsp;design</em>
           </h1>
-          <p class="hero-desc">
+          <p class="max-w-[42ch] text-ink-light text-[1.05rem] mb-8 max-md:mx-auto">
             Brand identities, editorial illustrations, packaging, and
             hand-lettering that make your ideas impossible to ignore.
           </p>
-          <div class="hero-cta">
-            <a href="#work" class="btn btn-primary">View Portfolio</a>
-            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          <div class="flex gap-4 flex-wrap max-md:justify-center">
+            <a href="#work"    class="inline-block px-[1.6em] py-[0.7em] rounded-[6px] text-[0.9rem] font-semibold tracking-[0.04em] bg-accent text-white border-2 border-accent cursor-pointer transition-all duration-[250ms] hover:-translate-y-0.5 hover:bg-accent-dk hover:border-accent-dk">View Portfolio</a>
+            <a href="#contact" class="inline-block px-[1.6em] py-[0.7em] rounded-[6px] text-[0.9rem] font-semibold tracking-[0.04em] bg-transparent text-ink border-2 border-border cursor-pointer transition-all duration-[250ms] hover:-translate-y-0.5 hover:border-ink">Get in Touch</a>
           </div>
         </div>
 
-        <div class="hero-image">
-          <div class="hero-image-frame">
-            <img src="assets/images/hero-portrait.svg" alt="ADH — graphic designer at work" loading="eager" />
+        <div class="flex-[0_0_clamp(260px,35vw,440px)] max-md:w-[min(320px,80vw)]">
+          <div class="aspect-[4/5] rounded-xl overflow-hidden bg-border relative shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
+            <img src="assets/images/hero-portrait.svg" alt="ADH — graphic designer at work" class="w-full h-full object-cover" loading="eager" />
           </div>
         </div>
 
@@ -69,63 +71,65 @@
   </section>
 
   <!-- ======================== SERVICES ======================== -->
-  <section id="services" class="section" aria-labelledby="services-heading">
+  <section id="services" class="section bg-surface" aria-labelledby="services-heading">
     <div class="container">
-      <div class="section-heading reveal">
-        <span class="label">What I Do</span>
-        <h2 id="services-heading">Services</h2>
+      <div class="text-center mb-[clamp(2rem,5vw,3.5rem)] reveal">
+        <span class="inline-block text-[0.72rem] font-bold tracking-[0.18em] uppercase text-accent mb-2">What I Do</span>
+        <h2 id="services-heading" class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.15]">Services</h2>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🎨</div>
-          <h3>Brand Identity</h3>
-          <p>Logo design, colour palettes, typography systems, and full brand guidelines that give your business a cohesive visual voice.</p>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[clamp(1rem,3vw,2rem)]">
+
+        <div class="p-8 border border-border rounded-[6px] transition-all duration-[250ms] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 reveal">
+          <div class="w-12 h-12 bg-accent-tint rounded-full grid place-items-center mb-5 text-[1.4rem]" aria-hidden="true">🎨</div>
+          <h3 class="text-[1.05rem] font-bold mb-2">Brand Identity</h3>
+          <p class="text-[0.9rem] text-ink-light leading-[1.65]">Logo design, colour palettes, typography systems, and full brand guidelines that give your business a cohesive visual voice.</p>
         </div>
 
-        <div class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">✏️</div>
-          <h3>Editorial Illustration</h3>
-          <p>Bespoke editorial and narrative illustrations for books, magazines, newspapers, and digital publications.</p>
+        <div class="p-8 border border-border rounded-[6px] transition-all duration-[250ms] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 reveal">
+          <div class="w-12 h-12 bg-accent-tint rounded-full grid place-items-center mb-5 text-[1.4rem]" aria-hidden="true">✏️</div>
+          <h3 class="text-[1.05rem] font-bold mb-2">Editorial Illustration</h3>
+          <p class="text-[0.9rem] text-ink-light leading-[1.65]">Bespoke editorial and narrative illustrations for books, magazines, newspapers, and digital publications.</p>
         </div>
 
-        <div class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">📦</div>
-          <h3>Packaging Design</h3>
-          <p>Eye-catching packaging concepts and structural mockups that stand out on shelves and feel great in hand.</p>
+        <div class="p-8 border border-border rounded-[6px] transition-all duration-[250ms] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 reveal">
+          <div class="w-12 h-12 bg-accent-tint rounded-full grid place-items-center mb-5 text-[1.4rem]" aria-hidden="true">📦</div>
+          <h3 class="text-[1.05rem] font-bold mb-2">Packaging Design</h3>
+          <p class="text-[0.9rem] text-ink-light leading-[1.65]">Eye-catching packaging concepts and structural mockups that stand out on shelves and feel great in hand.</p>
         </div>
 
-        <div class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🖋️</div>
-          <h3>Lettering &amp; Type</h3>
-          <p>Hand-lettering, custom type treatments, and display typeface design for headlines, merchandise, and murals.</p>
+        <div class="p-8 border border-border rounded-[6px] transition-all duration-[250ms] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 reveal">
+          <div class="w-12 h-12 bg-accent-tint rounded-full grid place-items-center mb-5 text-[1.4rem]" aria-hidden="true">🖋️</div>
+          <h3 class="text-[1.05rem] font-bold mb-2">Lettering &amp; Type</h3>
+          <p class="text-[0.9rem] text-ink-light leading-[1.65]">Hand-lettering, custom type treatments, and display typeface design for headlines, merchandise, and murals.</p>
         </div>
 
-        <div class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">📐</div>
-          <h3>Print &amp; Layout</h3>
-          <p>Brochures, posters, annual reports, and marketing collateral laid out for print with precise attention to detail.</p>
+        <div class="p-8 border border-border rounded-[6px] transition-all duration-[250ms] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 reveal">
+          <div class="w-12 h-12 bg-accent-tint rounded-full grid place-items-center mb-5 text-[1.4rem]" aria-hidden="true">📐</div>
+          <h3 class="text-[1.05rem] font-bold mb-2">Print &amp; Layout</h3>
+          <p class="text-[0.9rem] text-ink-light leading-[1.65]">Brochures, posters, annual reports, and marketing collateral laid out for print with precise attention to detail.</p>
         </div>
 
-        <div class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🌿</div>
-          <h3>Surface Pattern</h3>
-          <p>Repeating pattern collections for textiles, wallpaper, stationery, and home goods — from sketch to seamless tile.</p>
+        <div class="p-8 border border-border rounded-[6px] transition-all duration-[250ms] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 reveal">
+          <div class="w-12 h-12 bg-accent-tint rounded-full grid place-items-center mb-5 text-[1.4rem]" aria-hidden="true">🌿</div>
+          <h3 class="text-[1.05rem] font-bold mb-2">Surface Pattern</h3>
+          <p class="text-[0.9rem] text-ink-light leading-[1.65]">Repeating pattern collections for textiles, wallpaper, stationery, and home goods — from sketch to seamless tile.</p>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ======================== WORK ======================== -->
-  <section id="work" class="section" aria-labelledby="work-heading">
+  <section id="work" class="section bg-bg" aria-labelledby="work-heading">
     <div class="container">
-      <div class="section-heading reveal">
-        <span class="label">Selected Work</span>
-        <h2 id="work-heading">Portfolio</h2>
+      <div class="text-center mb-[clamp(2rem,5vw,3.5rem)] reveal">
+        <span class="inline-block text-[0.72rem] font-bold tracking-[0.18em] uppercase text-accent mb-2">Selected Work</span>
+        <h2 id="work-heading" class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.15]">Portfolio</h2>
       </div>
 
       <!-- Filter bar -->
-      <div class="filter-bar" role="group" aria-label="Filter by category">
+      <div class="flex gap-2 flex-wrap justify-center mb-10" role="group" aria-label="Filter by category">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="branding">Branding</button>
         <button class="filter-btn" data-filter="illustration">Illustration</button>
@@ -134,71 +138,71 @@
       </div>
 
       <!-- Gallery grid -->
-      <div class="gallery" id="gallery">
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-[clamp(1rem,3vw,2rem)]" id="gallery">
 
-        <article class="gallery-item reveal" data-category="branding">
-          <div class="gallery-thumb">
-            <img src="assets/works/work-01.svg" alt="Abstract brand identity composition in terracotta and sand" loading="lazy" />
+        <article class="group rounded-[6px] overflow-hidden bg-surface shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-[250ms] relative hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] hover:-translate-y-1 reveal" data-category="branding">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/works/work-01.svg" alt="Abstract brand identity composition in terracotta and sand" class="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.06]" loading="lazy" />
           </div>
-          <div class="gallery-caption">
-            <h3>Terracotta Studio — Brand Identity</h3>
-            <p>Logo, colour palette, and stationery suite</p>
-            <span class="tag">Branding</span>
+          <div class="p-4 px-5">
+            <h3 class="text-[0.95rem] font-bold mb-[0.2rem]">Terracotta Studio — Brand Identity</h3>
+            <p class="text-[0.8rem] text-ink-light">Logo, colour palette, and stationery suite</p>
+            <span class="inline-block mt-2 px-[0.7em] py-[0.15em] bg-accent-tint text-accent rounded-full text-[0.72rem] font-bold tracking-[0.06em] uppercase">Branding</span>
           </div>
         </article>
 
-        <article class="gallery-item reveal" data-category="lettering">
-          <div class="gallery-thumb">
-            <img src="assets/works/work-02.svg" alt="Bold typographic poster in dark background with terracotta letter A" loading="lazy" />
+        <article class="group rounded-[6px] overflow-hidden bg-surface shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-[250ms] relative hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] hover:-translate-y-1 reveal" data-category="lettering">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/works/work-02.svg" alt="Bold typographic poster in dark background with terracotta letter A" class="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.06]" loading="lazy" />
           </div>
-          <div class="gallery-caption">
-            <h3>Monogram Poster Series</h3>
-            <p>Limited-edition typographic print</p>
-            <span class="tag">Lettering</span>
-          </div>
-        </article>
-
-        <article class="gallery-item reveal" data-category="illustration">
-          <div class="gallery-thumb">
-            <img src="assets/works/work-03.svg" alt="Botanical illustration of a flowering plant" loading="lazy" />
-          </div>
-          <div class="gallery-caption">
-            <h3>Botanical Field Guide</h3>
-            <p>Editorial illustration, watercolour style</p>
-            <span class="tag">Illustration</span>
+          <div class="p-4 px-5">
+            <h3 class="text-[0.95rem] font-bold mb-[0.2rem]">Monogram Poster Series</h3>
+            <p class="text-[0.8rem] text-ink-light">Limited-edition typographic print</p>
+            <span class="inline-block mt-2 px-[0.7em] py-[0.15em] bg-accent-tint text-accent rounded-full text-[0.72rem] font-bold tracking-[0.06em] uppercase">Lettering</span>
           </div>
         </article>
 
-        <article class="gallery-item reveal" data-category="packaging">
-          <div class="gallery-thumb">
-            <img src="assets/works/work-04.svg" alt="Clean product packaging mockup in green and white" loading="lazy" />
+        <article class="group rounded-[6px] overflow-hidden bg-surface shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-[250ms] relative hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] hover:-translate-y-1 reveal" data-category="illustration">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/works/work-03.svg" alt="Botanical illustration of a flowering plant" class="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.06]" loading="lazy" />
           </div>
-          <div class="gallery-caption">
-            <h3>Bloom Skincare — Packaging</h3>
-            <p>Primary &amp; secondary packaging design</p>
-            <span class="tag">Packaging</span>
-          </div>
-        </article>
-
-        <article class="gallery-item reveal" data-category="illustration">
-          <div class="gallery-thumb">
-            <img src="assets/works/work-05.svg" alt="Dark-background character poster illustration" loading="lazy" />
-          </div>
-          <div class="gallery-caption">
-            <h3>Character Poster — Editorial</h3>
-            <p>Illustrated portrait for magazine feature</p>
-            <span class="tag">Illustration</span>
+          <div class="p-4 px-5">
+            <h3 class="text-[0.95rem] font-bold mb-[0.2rem]">Botanical Field Guide</h3>
+            <p class="text-[0.8rem] text-ink-light">Editorial illustration, watercolour style</p>
+            <span class="inline-block mt-2 px-[0.7em] py-[0.15em] bg-accent-tint text-accent rounded-full text-[0.72rem] font-bold tracking-[0.06em] uppercase">Illustration</span>
           </div>
         </article>
 
-        <article class="gallery-item reveal" data-category="lettering">
-          <div class="gallery-thumb">
-            <img src="assets/works/work-06.svg" alt="Lettering guideline study with outlined ADH text" loading="lazy" />
+        <article class="group rounded-[6px] overflow-hidden bg-surface shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-[250ms] relative hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] hover:-translate-y-1 reveal" data-category="packaging">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/works/work-04.svg" alt="Clean product packaging mockup in green and white" class="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.06]" loading="lazy" />
           </div>
-          <div class="gallery-caption">
-            <h3>Custom Lettering — ADH Wordmark</h3>
-            <p>Hand-drawn display lettering with grid overlays</p>
-            <span class="tag">Lettering</span>
+          <div class="p-4 px-5">
+            <h3 class="text-[0.95rem] font-bold mb-[0.2rem]">Bloom Skincare — Packaging</h3>
+            <p class="text-[0.8rem] text-ink-light">Primary &amp; secondary packaging design</p>
+            <span class="inline-block mt-2 px-[0.7em] py-[0.15em] bg-accent-tint text-accent rounded-full text-[0.72rem] font-bold tracking-[0.06em] uppercase">Packaging</span>
+          </div>
+        </article>
+
+        <article class="group rounded-[6px] overflow-hidden bg-surface shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-[250ms] relative hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] hover:-translate-y-1 reveal" data-category="illustration">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/works/work-05.svg" alt="Dark-background character poster illustration" class="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.06]" loading="lazy" />
+          </div>
+          <div class="p-4 px-5">
+            <h3 class="text-[0.95rem] font-bold mb-[0.2rem]">Character Poster — Editorial</h3>
+            <p class="text-[0.8rem] text-ink-light">Illustrated portrait for magazine feature</p>
+            <span class="inline-block mt-2 px-[0.7em] py-[0.15em] bg-accent-tint text-accent rounded-full text-[0.72rem] font-bold tracking-[0.06em] uppercase">Illustration</span>
+          </div>
+        </article>
+
+        <article class="group rounded-[6px] overflow-hidden bg-surface shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-[250ms] relative hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] hover:-translate-y-1 reveal" data-category="lettering">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/works/work-06.svg" alt="Lettering guideline study with outlined ADH text" class="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.06]" loading="lazy" />
+          </div>
+          <div class="p-4 px-5">
+            <h3 class="text-[0.95rem] font-bold mb-[0.2rem]">Custom Lettering — ADH Wordmark</h3>
+            <p class="text-[0.8rem] text-ink-light">Hand-drawn display lettering with grid overlays</p>
+            <span class="inline-block mt-2 px-[0.7em] py-[0.15em] bg-accent-tint text-accent rounded-full text-[0.72rem] font-bold tracking-[0.06em] uppercase">Lettering</span>
           </div>
         </article>
 
@@ -207,44 +211,44 @@
   </section>
 
   <!-- ======================== ABOUT ======================== -->
-  <section id="about" class="section" aria-labelledby="about-heading">
+  <section id="about" class="section bg-surface" aria-labelledby="about-heading">
     <div class="container">
-      <div class="about-inner">
+      <div class="flex gap-[clamp(2rem,6vw,5rem)] items-center flex-wrap max-md:flex-col max-md:text-center">
 
-        <div class="about-image reveal">
-          <div class="about-image-frame">
-            <img src="assets/images/about-photo.svg" alt="Portrait of ADH, graphic designer" loading="lazy" />
+        <div class="flex-[0_0_clamp(220px,30vw,360px)] max-md:mx-auto max-md:w-[min(260px,70vw)] reveal">
+          <div class="aspect-square rounded-full overflow-hidden bg-border shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
+            <img src="assets/images/about-photo.svg" alt="Portrait of ADH, graphic designer" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
 
-        <div class="about-text reveal">
-          <h2 id="about-heading">Hello, I'm&nbsp;ADH</h2>
-          <p>
+        <div class="flex-[1_1_300px] reveal">
+          <h2 id="about-heading" class="font-display text-[clamp(1.8rem,4vw,2.8rem)] mb-4 font-bold">Hello, I'm&nbsp;ADH</h2>
+          <p class="text-ink-light mb-4 text-base leading-[1.75]">
             I'm a freelance graphic designer and illustrator based wherever
             creativity takes me. For over a decade I've been helping brands,
             publishers, and independent clients turn their ideas into
             distinctive visual experiences.
           </p>
-          <p>
+          <p class="text-ink-light mb-4 text-base leading-[1.75]">
             My work spans brand identity, editorial illustration, packaging,
             and hand-lettering. I believe the best design is honest, precise,
             and full of character — work that people feel before they read.
           </p>
-          <p>
+          <p class="text-ink-light mb-4 text-base leading-[1.75]">
             When I'm not at the drawing board, you'll find me sketching in
             coffee shops, collecting vintage posters, or hosting illustration
             workshops for emerging creatives.
           </p>
 
-          <ul class="skills-list" aria-label="Skills">
-            <li class="skill-tag">Adobe Illustrator</li>
-            <li class="skill-tag">Procreate</li>
-            <li class="skill-tag">InDesign</li>
-            <li class="skill-tag">Photoshop</li>
-            <li class="skill-tag">Figma</li>
-            <li class="skill-tag">Hand-lettering</li>
-            <li class="skill-tag">Screen Print</li>
-            <li class="skill-tag">Risograph</li>
+          <ul class="flex gap-2 flex-wrap mt-6 max-md:justify-center" aria-label="Skills">
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Adobe Illustrator</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Procreate</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">InDesign</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Photoshop</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Figma</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Hand-lettering</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Screen Print</li>
+            <li class="px-[0.85em] py-[0.3em] border-[1.5px] border-border rounded-full text-[0.78rem] font-semibold text-ink-light">Risograph</li>
           </ul>
         </div>
 
@@ -253,53 +257,53 @@
   </section>
 
   <!-- ======================== TESTIMONIALS ======================== -->
-  <section id="testimonials" class="section" aria-labelledby="testimonials-heading">
+  <section id="testimonials" class="section bg-bg" aria-labelledby="testimonials-heading">
     <div class="container">
-      <div class="section-heading reveal">
-        <span class="label">Kind Words</span>
-        <h2 id="testimonials-heading">Client Testimonials</h2>
+      <div class="text-center mb-[clamp(2rem,5vw,3.5rem)] reveal">
+        <span class="inline-block text-[0.72rem] font-bold tracking-[0.18em] uppercase text-accent mb-2">Kind Words</span>
+        <h2 id="testimonials-heading" class="font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.15]">Client Testimonials</h2>
       </div>
 
-      <div class="testimonials-grid">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[clamp(1rem,3vw,2rem)]">
 
-        <div class="testimonial-card reveal">
-          <div class="stars" aria-label="5 stars">★★★★★</div>
-          <blockquote>
-            "ADH completely transformed our brand. The new identity is bold, timeless, and exactly what we needed to stand out in a crowded market."
+        <div class="bg-surface p-8 rounded-[6px] border border-border reveal">
+          <div class="text-stars text-base mb-4 tracking-[0.1em]" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="text-[0.95rem] leading-[1.7] text-ink-light mb-5 italic">
+            &#8220;ADH completely transformed our brand. The new identity is bold, timeless, and exactly what we needed to stand out in a crowded market.&#8221;
           </blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">S</div>
-            <div class="author-info">
-              <strong>Sara L.</strong>
-              <span>Founder, Terracotta Studio</span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-border overflow-hidden shrink-0 grid place-items-center font-bold text-accent text-base" aria-hidden="true">S</div>
+            <div>
+              <strong class="block text-[0.88rem]">Sara L.</strong>
+              <span class="text-[0.78rem] text-ink-light">Founder, Terracotta Studio</span>
             </div>
           </div>
         </div>
 
-        <div class="testimonial-card reveal">
-          <div class="stars" aria-label="5 stars">★★★★★</div>
-          <blockquote>
-            "Working with ADH on our editorial illustrations was a dream. Every piece felt thoughtful and elevated the whole issue."
+        <div class="bg-surface p-8 rounded-[6px] border border-border reveal">
+          <div class="text-stars text-base mb-4 tracking-[0.1em]" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="text-[0.95rem] leading-[1.7] text-ink-light mb-5 italic">
+            &#8220;Working with ADH on our editorial illustrations was a dream. Every piece felt thoughtful and elevated the whole issue.&#8221;
           </blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">M</div>
-            <div class="author-info">
-              <strong>Marcus T.</strong>
-              <span>Art Director, Verdant Magazine</span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-border overflow-hidden shrink-0 grid place-items-center font-bold text-accent text-base" aria-hidden="true">M</div>
+            <div>
+              <strong class="block text-[0.88rem]">Marcus T.</strong>
+              <span class="text-[0.78rem] text-ink-light">Art Director, Verdant Magazine</span>
             </div>
           </div>
         </div>
 
-        <div class="testimonial-card reveal">
-          <div class="stars" aria-label="5 stars">★★★★★</div>
-          <blockquote>
-            "Our packaging redesign led to a 40% increase in shelf pick-up within the first quarter. ADH delivered beyond expectations."
+        <div class="bg-surface p-8 rounded-[6px] border border-border reveal">
+          <div class="text-stars text-base mb-4 tracking-[0.1em]" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="text-[0.95rem] leading-[1.7] text-ink-light mb-5 italic">
+            &#8220;Our packaging redesign led to a 40% increase in shelf pick-up within the first quarter. ADH delivered beyond expectations.&#8221;
           </blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">P</div>
-            <div class="author-info">
-              <strong>Priya K.</strong>
-              <span>CMO, Bloom Skincare</span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-border overflow-hidden shrink-0 grid place-items-center font-bold text-accent text-base" aria-hidden="true">P</div>
+            <div>
+              <strong class="block text-[0.88rem]">Priya K.</strong>
+              <span class="text-[0.78rem] text-ink-light">CMO, Bloom Skincare</span>
             </div>
           </div>
         </div>
@@ -309,54 +313,57 @@
   </section>
 
   <!-- ======================== CONTACT ======================== -->
-  <section id="contact" class="section" aria-labelledby="contact-heading">
+  <section id="contact" class="section bg-surface" aria-labelledby="contact-heading">
     <div class="container">
-      <div class="contact-inner">
+      <div class="grid grid-cols-2 gap-[clamp(2rem,6vw,5rem)] items-start max-md:grid-cols-1">
 
-        <div class="contact-info reveal">
-          <h2 id="contact-heading">Let's work together</h2>
-          <p>
-            Have a project in mind? Whether it's a full rebrand, a single illustration,
-            or something entirely different — I'd love to hear about it.
+        <div class="reveal">
+          <h2 id="contact-heading" class="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold mb-4">Let&#8217;s work together</h2>
+          <p class="text-ink-light mb-6 leading-[1.75]">
+            Have a project in mind? Whether it&#8217;s a full rebrand, a single illustration,
+            or something entirely different &#8212; I&#8217;d love to hear about it.
           </p>
 
-          <ul class="contact-details">
-            <li>
-              <span class="icon" aria-hidden="true">✉️</span>
-              <a href="mailto:hello@adh.design">hello@adh.design</a>
+          <ul class="list-none flex flex-col gap-3">
+            <li class="flex items-center gap-3 text-[0.9rem] text-ink-light">
+              <span class="w-9 h-9 rounded-full bg-accent-tint grid place-items-center text-base shrink-0" aria-hidden="true">&#9993;&#65039;</span>
+              <a href="mailto:hello@adh.design" class="text-accent">hello@adh.design</a>
             </li>
-            <li>
-              <span class="icon" aria-hidden="true">📍</span>
+            <li class="flex items-center gap-3 text-[0.9rem] text-ink-light">
+              <span class="w-9 h-9 rounded-full bg-accent-tint grid place-items-center text-base shrink-0" aria-hidden="true">&#128205;</span>
               <span>Available worldwide, based in&nbsp;London</span>
             </li>
-            <li>
-              <span class="icon" aria-hidden="true">🕐</span>
+            <li class="flex items-center gap-3 text-[0.9rem] text-ink-light">
+              <span class="w-9 h-9 rounded-full bg-accent-tint grid place-items-center text-base shrink-0" aria-hidden="true">&#128336;</span>
               <span>Typical response within 24&nbsp;hours</span>
             </li>
           </ul>
         </div>
 
-        <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <form class="flex flex-col gap-4 reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <!-- Netlify honeypot -->
           <p class="sr-only">
             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
           </p>
           <input type="hidden" name="form-name" value="contact" />
 
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+          <div class="flex flex-col gap-[0.35rem]">
+            <label for="name" class="text-[0.8rem] font-semibold tracking-[0.05em] uppercase text-ink-light">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name"
+              class="px-4 py-[0.7em] border-[1.5px] border-border rounded-[6px] font-sans text-[0.95rem] bg-bg text-ink transition-all duration-[250ms] outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(212,82,42,0.15)]" />
           </div>
 
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <div class="flex flex-col gap-[0.35rem]">
+            <label for="email" class="text-[0.8rem] font-semibold tracking-[0.05em] uppercase text-ink-light">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"
+              class="px-4 py-[0.7em] border-[1.5px] border-border rounded-[6px] font-sans text-[0.95rem] bg-bg text-ink transition-all duration-[250ms] outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(212,82,42,0.15)]" />
           </div>
 
-          <div class="form-group">
-            <label for="service">Service</label>
-            <select id="service" name="service">
-              <option value="">— Select a service —</option>
+          <div class="flex flex-col gap-[0.35rem]">
+            <label for="service" class="text-[0.8rem] font-semibold tracking-[0.05em] uppercase text-ink-light">Service</label>
+            <select id="service" name="service"
+              class="px-4 py-[0.7em] border-[1.5px] border-border rounded-[6px] font-sans text-[0.95rem] bg-bg text-ink transition-all duration-[250ms] outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(212,82,42,0.15)]">
+              <option value="">&#8212; Select a service &#8212;</option>
               <option value="brand-identity">Brand Identity</option>
               <option value="illustration">Editorial Illustration</option>
               <option value="packaging">Packaging Design</option>
@@ -367,12 +374,13 @@
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
+          <div class="flex flex-col gap-[0.35rem]">
+            <label for="message" class="text-[0.8rem] font-semibold tracking-[0.05em] uppercase text-ink-light">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project&#8230;" required
+              class="px-4 py-[0.7em] border-[1.5px] border-border rounded-[6px] font-sans text-[0.95rem] bg-bg text-ink transition-all duration-[250ms] outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(212,82,42,0.15)] resize-y min-h-[130px]"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Send Message&nbsp;→</button>
+          <button type="submit" class="inline-block px-[1.6em] py-[0.7em] rounded-[6px] text-[0.9rem] font-semibold tracking-[0.04em] bg-accent text-white border-2 border-accent cursor-pointer transition-all duration-[250ms] hover:-translate-y-0.5 hover:bg-accent-dk hover:border-accent-dk">Send Message&nbsp;&#8594;</button>
         </form>
 
       </div>
@@ -380,25 +388,28 @@
   </section>
 
   <!-- ======================== FOOTER ======================== -->
-  <footer class="footer">
+  <footer class="bg-ink text-[rgba(255,255,255,0.55)] py-8">
     <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">A<span>DH</span></span>
+      <div class="flex items-center justify-between gap-4 flex-wrap">
+        <span class="font-display text-[1.1rem] font-bold text-white">A<span class="text-accent">DH</span></span>
 
-        <p class="footer-copy">© <span id="year"></span> ADH. All rights reserved.</p>
+        <p class="text-[0.8rem]">&#169; <span id="year"></span> ADH. All rights reserved.</p>
 
-        <nav class="social-links" aria-label="Social media">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <nav class="flex gap-3" aria-label="Social media">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="w-9 h-9 rounded-full border-[1.5px] border-[rgba(255,255,255,0.2)] grid place-items-center text-[0.9rem] text-[rgba(255,255,255,0.7)] transition-all duration-[250ms] hover:border-accent hover:text-accent">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
             </svg>
           </a>
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance"
+            class="w-9 h-9 rounded-full border-[1.5px] border-[rgba(255,255,255,0.2)] grid place-items-center text-[0.9rem] text-[rgba(255,255,255,0.7)] transition-all duration-[250ms] hover:border-accent hover:text-accent">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M7.5 11.5c1.1 0 2-.9 2-2s-.9-2-2-2H4v4h3.5zm.5 1.5H4v4.5h4c1.4 0 2.5-1.1 2.5-2.25S9.4 13 8 13zm7.5-1.5c-1.7 0-3 1.3-3 3h6c0-1.7-1.3-3-3-3zm0-1.5c2.5 0 4.5 2 4.5 4.5S18 19 15.5 19 11 17 11 14.5 13 10 15.5 10zM9.5 5H14v1.5H9.5V5z"/>
             </svg>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+            class="w-9 h-9 rounded-full border-[1.5px] border-[rgba(255,255,255,0.2)] grid place-items-center text-[0.9rem] text-[rgba(255,255,255,0.7)] transition-all duration-[250ms] hover:border-accent hover:text-accent">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
             </svg>
@@ -410,10 +421,10 @@
 
   <!-- ======================== LIGHTBOX ======================== -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">×</button>
-      <img id="lightbox-img" src="" alt="" />
-      <p class="lightbox-caption" id="lightbox-caption"></p>
+    <div class="relative max-w-[min(860px,90vw)] max-h-[90vh] [max-height:90svh]">
+      <button class="absolute top-[-2rem] right-0 bg-transparent border-0 text-white text-[2rem] cursor-pointer leading-none" id="lightbox-close" aria-label="Close lightbox">&#215;</button>
+      <img id="lightbox-img" src="" alt="" class="rounded-[6px] max-h-[80vh] [max-height:80svh] object-contain" />
+      <p class="text-white mt-3 text-[0.9rem] text-center" id="lightbox-caption"></p>
     </div>
   </div>
 
@@ -452,7 +463,7 @@
 
     // ---- Portfolio filter ----
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.gallery-item');
+    const galleryItems = document.querySelectorAll('[data-category]');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -460,7 +471,7 @@
         btn.classList.add('active');
 
         const filter = btn.dataset.filter;
-        items.forEach(item => {
+        galleryItems.forEach(item => {
           const show = filter === 'all' || item.dataset.category === filter;
           item.style.display = show ? '' : 'none';
         });
@@ -473,10 +484,10 @@
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.getElementById('lightbox-close');
 
-    document.querySelectorAll('.gallery-item').forEach(item => {
+    document.querySelectorAll('[data-category]').forEach(item => {
       item.addEventListener('click', () => {
-        const img = item.querySelector('.gallery-thumb img');
-        const title = item.querySelector('.gallery-caption h3').textContent;
+        const img = item.querySelector('img');
+        const title = item.querySelector('h3').textContent;
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
         lightboxCaption.textContent = title;
@@ -496,16 +507,16 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
     // ---- Contact form (Netlify) ----
-    const form = document.querySelector('.contact-form');
+    const form = document.querySelector('[name="contact"]');
     form.addEventListener('submit', e => {
       e.preventDefault();
       const data = new FormData(form);
       fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
         .then(() => {
-          form.innerHTML = '<p class="form-success">✅ Thanks! I\'ll be in touch soon.</p>';
+          form.innerHTML = '<p class="form-success">&#9989; Thanks! I\'ll be in touch soon.</p>';
         })
         .catch(() => {
-          alert('Oops — something went wrong. Please try emailing directly.');
+          alert('Oops \u2014 something went wrong. Please try emailing directly.');
         });
     });
   </script>

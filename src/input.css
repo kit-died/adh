@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* =========================================================
+   ADH Portfolio — Tailwind v4 theme tokens
+   ========================================================= */
+@theme {
+  --color-bg:           #f8f7f4;
+  --color-surface:      #ffffff;
+  --color-ink:          #1a1a1a;
+  --color-ink-light:    #6b6b6b;
+  --color-accent:       #d4522a;
+  --color-accent-dk:    #b34020;
+  --color-border:       #e2e0db;
+  --color-accent-tint:  #fde8e2;
+  --color-stars:        #f5a623;
+
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  a { color: inherit; text-decoration: none; }
+}
+
+/* =========================================================
+   Components — classes that require JS-toggled states,
+   complex responsive behaviour, or clamp() sizing
+   ========================================================= */
+@layer components {
+
+  /* Container */
+  .container {
+    width: min(1200px, 100%);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+  }
+
+  /* Section vertical padding */
+  .section {
+    padding-block: clamp(3rem, 8vw, 6rem);
+  }
+
+  /* ---- Navigation links (mobile toggle + desktop flex) ---- */
+  .nav-links {
+    display: none;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  /* Mobile: open state injected by JS */
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #f8f7f4;
+    padding: 1rem clamp(1rem, 3vw, 2rem) 2rem;
+    border-bottom: 1px solid #e2e0db;
+    gap: 1.25rem;
+  }
+
+  /* Desktop: always visible */
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+  }
+
+  /* ---- Scroll-reveal animation ---- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---- Portfolio filter buttons ---- */
+  .filter-btn {
+    padding: 0.4em 1.1em;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1.5px solid #e2e0db;
+    background: transparent;
+    color: #6b6b6b;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: #d4522a;
+    color: #fff;
+    border-color: #d4522a;
+  }
+
+  /* ---- Lightbox (display toggled by JS) ---- */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.88);
+    place-items: center;
+  }
+
+  .lightbox.open {
+    display: grid;
+  }
+
+  /* ---- Contact form success state ---- */
+  .form-success {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+}

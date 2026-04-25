@@ -1,0 +1,13 @@
+{
+  "name": "adh-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i src/input.css -o style.css --minify",
+    "dev": "npx @tailwindcss/cli -i src/input.css -o style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4"
+  }
+}
