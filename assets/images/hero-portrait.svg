@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 550" width="440" height="550">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8d5c0"/>
+      <stop offset="100%" style="stop-color:#c9b99a"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect width="440" height="550" rx="12"/>
+    </clipPath>
+  </defs>
+  <rect width="440" height="550" fill="url(#bg)" rx="12"/>
+  <!-- Background shapes -->
+  <circle cx="380" cy="80" r="140" fill="#d4522a" opacity="0.15"/>
+  <rect x="0" y="380" width="440" height="170" fill="#1a1a1a" opacity="0.06" rx="0"/>
+  <!-- Stylised figure -->
+  <circle cx="220" cy="160" r="80" fill="#f0c08a"/>
+  <!-- Hair -->
+  <ellipse cx="220" cy="110" rx="78" ry="55" fill="#5a3a1a"/>
+  <ellipse cx="155" cy="150" rx="25" ry="50" fill="#5a3a1a"/>
+  <!-- Body -->
+  <rect x="150" y="240" width="140" height="180" rx="70" fill="#d4522a" opacity="0.9"/>
+  <!-- Arms -->
+  <ellipse cx="118" cy="310" rx="22" ry="65" fill="#d4522a" opacity="0.85" transform="rotate(-12 118 310)"/>
+  <ellipse cx="322" cy="310" rx="22" ry="65" fill="#d4522a" opacity="0.85" transform="rotate(12 322 310)"/>
+  <!-- Hands -->
+  <circle cx="100" cy="368" r="18" fill="#f0c08a"/>
+  <circle cx="340" cy="368" r="18" fill="#f0c08a"/>
+  <!-- Pencil in hand -->
+  <rect x="330" y="348" width="6" height="44" rx="3" fill="#f5a623" transform="rotate(30 336 370)"/>
+  <polygon points="330,348 336,348 333,340" fill="#1a1a1a" transform="rotate(30 336 370)"/>
+  <!-- Eyes & smile -->
+  <circle cx="200" cy="155" r="8" fill="#1a1a1a"/>
+  <circle cx="240" cy="155" r="8" fill="#1a1a1a"/>
+  <circle cx="203" cy="152" r="3" fill="#fff"/>
+  <circle cx="243" cy="152" r="3" fill="#fff"/>
+  <path d="M205 180 Q220 195 235 180" stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

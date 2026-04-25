@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f4f0eb"/>
+  <!-- Typeface / lettering design -->
+  <text x="400" y="240" font-family="Georgia,serif" font-size="180" font-weight="700" text-anchor="middle" fill="#d4522a" opacity="0.12">ADH</text>
+  <text x="400" y="240" font-family="Georgia,serif" font-size="180" font-weight="700" text-anchor="middle" fill="none" stroke="#d4522a" stroke-width="2" opacity="0.8">ADH</text>
+  <!-- Guideline rules -->
+  <line x1="60" y1="115" x2="740" y2="115" stroke="#d4522a" stroke-width="1" opacity="0.3" stroke-dasharray="6,4"/>
+  <line x1="60" y1="250" x2="740" y2="250" stroke="#1a1a1a" stroke-width="1" opacity="0.15" stroke-dasharray="6,4"/>
+  <line x1="60" y1="310" x2="740" y2="310" stroke="#1a1a1a" stroke-width="1" opacity="0.1" stroke-dasharray="6,4"/>
+  <!-- Annotation marks -->
+  <line x1="80" y1="115" x2="80" y2="250" stroke="#d4522a" stroke-width="1.5" opacity="0.45" marker-end="url(#arrow)"/>
+  <circle cx="80" cy="115" r="3" fill="#d4522a" opacity="0.6"/>
+  <circle cx="80" cy="250" r="3" fill="#d4522a" opacity="0.6"/>
+  <!-- Sub-label -->
+  <rect x="200" y="360" width="400" height="14" rx="4" fill="#1a1a1a" opacity="0.12"/>
+  <rect x="280" y="388" width="240" height="10" rx="3" fill="#1a1a1a" opacity="0.08"/>
+</svg>
