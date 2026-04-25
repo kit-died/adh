@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0ede6"/>
+      <stop offset="100%" style="stop-color:#e8d5c0"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4522a"/>
+      <stop offset="100%" style="stop-color:#b34020"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g1)"/>
+  <!-- Abstract geometric composition -->
+  <circle cx="600" cy="120" r="180" fill="url(#g2)" opacity="0.18"/>
+  <rect x="80" y="80" width="260" height="380" rx="8" fill="#c9b99a" opacity="0.35"/>
+  <polygon points="400,60 520,260 280,260" fill="#d4522a" opacity="0.22"/>
+  <circle cx="200" cy="440" r="100" fill="#8b6f47" opacity="0.2"/>
+  <rect x="480" y="320" width="200" height="200" rx="100" fill="#d4522a" opacity="0.13"/>
+  <!-- Ink strokes -->
+  <path d="M120 500 Q300 350 500 480 T760 400" stroke="#1a1a1a" stroke-width="3" fill="none" opacity="0.12"/>
+  <path d="M60 350 Q200 200 380 320 T720 280" stroke="#d4522a" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Text-like element -->
+  <rect x="200" y="520" width="120" height="8" rx="4" fill="#1a1a1a" opacity="0.15"/>
+  <rect x="200" y="538" width="80" height="6" rx="3" fill="#1a1a1a" opacity="0.1"/>
+</svg>

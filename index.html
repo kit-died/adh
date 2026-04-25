@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ADH — Graphic designer &amp; illustrator. Brand identity, editorial illustration, packaging, and lettering." />
+  <meta property="og:title" content="ADH — Graphic Designer &amp; Illustrator" />
+  <meta property="og:description" content="Portfolio of ADH — brand identity, editorial illustration, packaging, and lettering." />
+  <meta property="og:type" content="website" />
+  <title>ADH — Graphic Designer &amp; Illustrator</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ======================== NAV ======================== -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="nav-logo" aria-label="ADH — home">A<span>DH</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <span class="hero-eyebrow">Graphic Designer &amp; Illustrator</span>
+          <h1 id="hero-heading">
+            Crafting stories<br/>
+            through <em>art&nbsp;&amp;&nbsp;design</em>
+          </h1>
+          <p class="hero-desc">
+            Brand identities, editorial illustrations, packaging, and
+            hand-lettering that make your ideas impossible to ignore.
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary">View Portfolio</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="hero-image-frame">
+            <img src="assets/images/hero-portrait.svg" alt="ADH — graphic designer at work" loading="eager" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SERVICES ======================== -->
+  <section id="services" class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">What I Do</span>
+        <h2 id="services-heading">Services</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">🎨</div>
+          <h3>Brand Identity</h3>
+          <p>Logo design, colour palettes, typography systems, and full brand guidelines that give your business a cohesive visual voice.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">✏️</div>
+          <h3>Editorial Illustration</h3>
+          <p>Bespoke editorial and narrative illustrations for books, magazines, newspapers, and digital publications.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">📦</div>
+          <h3>Packaging Design</h3>
+          <p>Eye-catching packaging concepts and structural mockups that stand out on shelves and feel great in hand.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">🖋️</div>
+          <h3>Lettering &amp; Type</h3>
+          <p>Hand-lettering, custom type treatments, and display typeface design for headlines, merchandise, and murals.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">📐</div>
+          <h3>Print &amp; Layout</h3>
+          <p>Brochures, posters, annual reports, and marketing collateral laid out for print with precise attention to detail.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">🌿</div>
+          <h3>Surface Pattern</h3>
+          <p>Repeating pattern collections for textiles, wallpaper, stationery, and home goods — from sketch to seamless tile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WORK ======================== -->
+  <section id="work" class="section" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Selected Work</span>
+        <h2 id="work-heading">Portfolio</h2>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="filter-bar" role="group" aria-label="Filter by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="illustration">Illustration</button>
+        <button class="filter-btn" data-filter="packaging">Packaging</button>
+        <button class="filter-btn" data-filter="lettering">Lettering</button>
+      </div>
+
+      <!-- Gallery grid -->
+      <div class="gallery" id="gallery">
+
+        <article class="gallery-item reveal" data-category="branding">
+          <div class="gallery-thumb">
+            <img src="assets/works/work-01.svg" alt="Abstract brand identity composition in terracotta and sand" loading="lazy" />
+          </div>
+          <div class="gallery-caption">
+            <h3>Terracotta Studio — Brand Identity</h3>
+            <p>Logo, colour palette, and stationery suite</p>
+            <span class="tag">Branding</span>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-category="lettering">
+          <div class="gallery-thumb">
+            <img src="assets/works/work-02.svg" alt="Bold typographic poster in dark background with terracotta letter A" loading="lazy" />
+          </div>
+          <div class="gallery-caption">
+            <h3>Monogram Poster Series</h3>
+            <p>Limited-edition typographic print</p>
+            <span class="tag">Lettering</span>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-category="illustration">
+          <div class="gallery-thumb">
+            <img src="assets/works/work-03.svg" alt="Botanical illustration of a flowering plant" loading="lazy" />
+          </div>
+          <div class="gallery-caption">
+            <h3>Botanical Field Guide</h3>
+            <p>Editorial illustration, watercolour style</p>
+            <span class="tag">Illustration</span>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-category="packaging">
+          <div class="gallery-thumb">
+            <img src="assets/works/work-04.svg" alt="Clean product packaging mockup in green and white" loading="lazy" />
+          </div>
+          <div class="gallery-caption">
+            <h3>Bloom Skincare — Packaging</h3>
+            <p>Primary &amp; secondary packaging design</p>
+            <span class="tag">Packaging</span>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-category="illustration">
+          <div class="gallery-thumb">
+            <img src="assets/works/work-05.svg" alt="Dark-background character poster illustration" loading="lazy" />
+          </div>
+          <div class="gallery-caption">
+            <h3>Character Poster — Editorial</h3>
+            <p>Illustrated portrait for magazine feature</p>
+            <span class="tag">Illustration</span>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-category="lettering">
+          <div class="gallery-thumb">
+            <img src="assets/works/work-06.svg" alt="Lettering guideline study with outlined ADH text" loading="lazy" />
+          </div>
+          <div class="gallery-caption">
+            <h3>Custom Lettering — ADH Wordmark</h3>
+            <p>Hand-drawn display lettering with grid overlays</p>
+            <span class="tag">Lettering</span>
+          </div>
+        </article>
+
+      </div><!-- /gallery -->
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section id="about" class="section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-inner">
+
+        <div class="about-image reveal">
+          <div class="about-image-frame">
+            <img src="assets/images/about-photo.svg" alt="Portrait of ADH, graphic designer" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <h2 id="about-heading">Hello, I'm&nbsp;ADH</h2>
+          <p>
+            I'm a freelance graphic designer and illustrator based wherever
+            creativity takes me. For over a decade I've been helping brands,
+            publishers, and independent clients turn their ideas into
+            distinctive visual experiences.
+          </p>
+          <p>
+            My work spans brand identity, editorial illustration, packaging,
+            and hand-lettering. I believe the best design is honest, precise,
+            and full of character — work that people feel before they read.
+          </p>
+          <p>
+            When I'm not at the drawing board, you'll find me sketching in
+            coffee shops, collecting vintage posters, or hosting illustration
+            workshops for emerging creatives.
+          </p>
+
+          <ul class="skills-list" aria-label="Skills">
+            <li class="skill-tag">Adobe Illustrator</li>
+            <li class="skill-tag">Procreate</li>
+            <li class="skill-tag">InDesign</li>
+            <li class="skill-tag">Photoshop</li>
+            <li class="skill-tag">Figma</li>
+            <li class="skill-tag">Hand-lettering</li>
+            <li class="skill-tag">Screen Print</li>
+            <li class="skill-tag">Risograph</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== TESTIMONIALS ======================== -->
+  <section id="testimonials" class="section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Kind Words</span>
+        <h2 id="testimonials-heading">Client Testimonials</h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <blockquote>
+            "ADH completely transformed our brand. The new identity is bold, timeless, and exactly what we needed to stand out in a crowded market."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">S</div>
+            <div class="author-info">
+              <strong>Sara L.</strong>
+              <span>Founder, Terracotta Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <blockquote>
+            "Working with ADH on our editorial illustrations was a dream. Every piece felt thoughtful and elevated the whole issue."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">M</div>
+            <div class="author-info">
+              <strong>Marcus T.</strong>
+              <span>Art Director, Verdant Magazine</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <blockquote>
+            "Our packaging redesign led to a 40% increase in shelf pick-up within the first quarter. ADH delivered beyond expectations."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">P</div>
+            <div class="author-info">
+              <strong>Priya K.</strong>
+              <span>CMO, Bloom Skincare</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contact" class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-info reveal">
+          <h2 id="contact-heading">Let's work together</h2>
+          <p>
+            Have a project in mind? Whether it's a full rebrand, a single illustration,
+            or something entirely different — I'd love to hear about it.
+          </p>
+
+          <ul class="contact-details">
+            <li>
+              <span class="icon" aria-hidden="true">✉️</span>
+              <a href="mailto:hello@adh.design">hello@adh.design</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">📍</span>
+              <span>Available worldwide, based in&nbsp;London</span>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">🕐</span>
+              <span>Typical response within 24&nbsp;hours</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <!-- Netlify honeypot -->
+          <p class="sr-only">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option value="">— Select a service —</option>
+              <option value="brand-identity">Brand Identity</option>
+              <option value="illustration">Editorial Illustration</option>
+              <option value="packaging">Packaging Design</option>
+              <option value="lettering">Lettering &amp; Type</option>
+              <option value="print">Print &amp; Layout</option>
+              <option value="surface-pattern">Surface Pattern</option>
+              <option value="other">Other / Not sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message&nbsp;→</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">A<span>DH</span></span>
+
+        <p class="footer-copy">© <span id="year"></span> ADH. All rights reserved.</p>
+
+        <nav class="social-links" aria-label="Social media">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7.5 11.5c1.1 0 2-.9 2-2s-.9-2-2-2H4v4h3.5zm.5 1.5H4v4.5h4c1.4 0 2.5-1.1 2.5-2.25S9.4 13 8 13zm7.5-1.5c-1.7 0-3 1.3-3 3h6c0-1.7-1.3-3-3-3zm0-1.5c2.5 0 4.5 2 4.5 4.5S18 19 15.5 19 11 17 11 14.5 13 10 15.5 10zM9.5 5H14v1.5H9.5V5z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== LIGHTBOX ======================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">×</button>
+      <img id="lightbox-img" src="" alt="" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    // ---- Year ----
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---- Mobile nav toggle ----
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close nav when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ---- Scroll reveal ----
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ---- Portfolio filter ----
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // ---- Lightbox ----
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('.gallery-thumb img');
+        const title = item.querySelector('.gallery-caption h3').textContent;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = title;
+        lightbox.classList.add('open');
+        lightboxClose.focus();
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // ---- Contact form (Netlify) ----
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+        .then(() => {
+          form.innerHTML = '<p class="form-success">✅ Thanks! I\'ll be in touch soon.</p>';
+        })
+        .catch(() => {
+          alert('Oops — something went wrong. Please try emailing directly.');
+        });
+    });
+  </script>
+</body>
+</html>

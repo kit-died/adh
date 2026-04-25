@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f7f4"/>
+  <!-- Botanical illustration style -->
+  <ellipse cx="400" cy="500" rx="180" ry="30" fill="#c9b99a" opacity="0.25"/>
+  <!-- Stem -->
+  <path d="M400 480 Q380 380 360 300 Q340 220 370 160" stroke="#5a7a4a" stroke-width="4" fill="none"/>
+  <!-- Leaves -->
+  <path d="M370 340 Q300 300 280 240 Q340 260 370 340Z" fill="#6a8c5a" opacity="0.75"/>
+  <path d="M360 280 Q430 250 460 190 Q400 220 360 280Z" fill="#5a7a4a" opacity="0.8"/>
+  <path d="M365 380 Q290 370 270 310 Q330 330 365 380Z" fill="#7a9c6a" opacity="0.65"/>
+  <!-- Flower -->
+  <circle cx="370" cy="155" r="40" fill="#d4522a" opacity="0.15"/>
+  <circle cx="370" cy="155" r="22" fill="#d4522a" opacity="0.8"/>
+  <circle cx="370" cy="155" r="10" fill="#f5a623"/>
+  <ellipse cx="370" cy="115" rx="12" ry="22" fill="#e8856a" opacity="0.7"/>
+  <ellipse cx="370" cy="195" rx="12" ry="22" fill="#e8856a" opacity="0.7"/>
+  <ellipse cx="330" cy="155" rx="22" ry="12" fill="#e8856a" opacity="0.7"/>
+  <ellipse cx="410" cy="155" rx="22" ry="12" fill="#e8856a" opacity="0.7"/>
+  <!-- Small details -->
+  <circle cx="500" cy="200" r="6" fill="#d4522a" opacity="0.3"/>
+  <circle cx="520" cy="350" r="4" fill="#6a8c5a" opacity="0.4"/>
+  <circle cx="260" cy="420" r="5" fill="#c9b99a" opacity="0.5"/>
+</svg>
